@@ -1,38 +1,57 @@
-source 'https://rubygems.org'
+# -*- encoding : utf-8 -*-
+ruby '1.9.3'
+
+source "http://ruby.taobao.org"
 
 gem 'rails', '3.2.15'
+gem 'jquery-rails'
+gem 'mysql2'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+#rabl 
+gem 'rabl'
+gem 'oj'
 
-gem 'sqlite3'
+#grape
+gem 'grape'
+gem 'grape-rabl'
+
+#divise
+gem 'devise'
+gem 'devise-encryptable' 
+
+#will_paginate
+gem "will_paginate", '~> 3.0'
+gem 'will_paginate_mongoid'
+
+#carrierwave
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'mime-types'
 
 
-# Gems used only for assets and not required
-# in production environments by default.
+gem "geocoder"
+gem 'capistrano', '~> 2.15.5'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
+  gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+group :development, :test do
+  #gem 'sqlite3'
+  gem "debugger"
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'thin'
+  #gem 'rspec'
+  #gem 'shoulda'
+  #gem 'mocha'
+end
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+group :production do
+  gem 'unicorn'
+end
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
 
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
