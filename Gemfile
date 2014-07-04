@@ -6,6 +6,7 @@ source "http://ruby.taobao.org"
 gem 'rails', '3.2.15'
 gem 'jquery-rails'
 gem 'mysql2'
+gem 'sqlite3'
 
 #rabl 
 gem 'rabl'
