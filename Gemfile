@@ -2,6 +2,7 @@
 ruby '1.9.3'
 
 source "http://ruby.taobao.org"
+source 'https://rails-assets.org'
 
 gem 'rails', '3.2.15'
 gem 'jquery-rails'
@@ -22,7 +23,6 @@ gem 'devise-encryptable'
 
 #will_paginate
 gem "will_paginate", '~> 3.0'
-gem 'will_paginate_mongoid'
 
 #carrierwave
 gem 'carrierwave'
@@ -38,6 +38,8 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
+  gem "less-rails"
+  gem 'rails-assets-bootstrap'
 end
 
 group :development, :test do

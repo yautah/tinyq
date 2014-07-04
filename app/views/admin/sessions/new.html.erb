@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<!-- BEGIN HEAD -->
+<head>
+<meta charset="utf-8" />
+<title>后台管理</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta content="" name="description" />
+<meta content="" name="author" />
+<%= stylesheet_link_tag    "admin", :media => "all" %>
+<%= csrf_meta_tags %>
+<link rel="shortcut icon" href="/favicon.ico" />
+<style>
+
+
+</style>
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body >
+<div class="wrapper">
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class=> 'form-signin'}) do |f| %>
+    <h2 class="form-signin-heading">TinyQ</h2>
+    <%= f.text_field :login, :autofocus => true, require: true, autofocus: true, placeholder: '请输入用户名', class: 'form-control login-input' %>
+    <%= f.password_field :password, class: 'form-control', placeholder: '请输入密码', require: true %>
+    <label class="checkbox">
+      <div><%= f.check_box :remember_me %> <%= f.label :remember_me, "下次自动登陆" %></div>
+    </label>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">登 录</button>   
+  </form>
+<% end %>
+</div>
+</html>

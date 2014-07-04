@@ -1,4 +1,16 @@
 Tinyq::Application.routes.draw do
+
+
+
+  devise_for :admins, 
+    path: 'admin' ,
+    path_names: {sign_in: 'login'},
+    controllers: { sessions: "admin/sessions" }
+
+  namespace :admin do
+    root :to => 'main#index'
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +60,7 @@ Tinyq::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+   root :to => 'admin/main#index'
 
   # See how all your routes lay out with "rake routes"
 
