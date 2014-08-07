@@ -1,0 +1,16 @@
+@app.config(['$routeProvider', ($routeProvider) ->
+  $routeProvider.
+    when('/abc', {
+      templateUrl: '<%= asset_path "admin/main/index.html.erb" %>',
+      controller: 'MainCtrl'
+    }).
+    when('/', {
+      templateUrl: '<%= asset_path "admin/main/dashboard.html.erb" %>',
+      controller: 'MainCtrl'
+    }).
+    otherwise({
+      redirectTo: '/'
+      #templateUrl: '/error.html'
+      #controller: 'HomeCtrl'
+    }) 
+])

@@ -9,6 +9,14 @@ Tinyq::Application.routes.draw do
 
   namespace :admin do
     root :to => 'main#index'
+
+    resource :weixin_accounts do
+      collection do
+        get 'show'
+      end
+    end
+
+    resources :weixin_menus
   end
 
   # The priority is based upon order of creation:

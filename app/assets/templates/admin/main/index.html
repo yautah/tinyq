@@ -1,0 +1,68 @@
+<div class="nav-bread">
+  <ol class="breadcrumb" >
+    <li><a href="#">用户</a></li>
+    <li class="active">用户列表</li>
+  </ol>
+  <button type="button" class="btn btn-success">新 建</button>
+</div>
+
+
+<div class="row top_search">
+  <div class="col-xs-6">
+    <div class="input-group">
+
+      <input type="text" class="form-control" placeholder="输入要搜索的信息">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+      </span>
+    </div><!-- /input-group -->
+  </div>
+  <div class="col-xs-6 info_top">
+    <div class="btn-group pull-right">
+      <button type="button" class="btn btn-success">新 建</button>
+    </div><!-- /btn-group -->
+  </div>
+</div><!-- /top_search -->	
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="box">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>名称</th>
+            <th>代码</th>
+            <th>价格</th>
+            <th>涨跌比</th>
+            <th>名称</th>
+            <th>代码</th>
+            <th>价格</th>
+            <th>涨跌比</th>
+          </tr>
+        </thead>
+        <tbody>
+        <% 15.times do %>
+        <tr>
+          <td><a href="zhenduan.html">克明面业</a></td>
+          <td><a href="zhenduan.html">SZ002661</a></td>
+          <td>34.20</td>
+          <td>-6.28%</td>
+          <td><a href="zhenduan.html">金河生物</a></td>
+          <td><a href="zhenduan.html">SZ002688</a></td>
+          <td>26.26</td>
+          <td>-0.15%</td>
+        </tr>
+        <% end %>
+        </tbody>
+      </table>
+      <div class="div-page">
+        <ul class="pagination">
+          <li class="disabled"> <a href="#">上一页</a> </li>
+          <li class="active"><a href="#">1</a>
+          <li><a href="#">2</a></li>
+          <li><a href="#">下一页</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

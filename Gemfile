@@ -33,6 +33,10 @@ gem 'mime-types'
 gem "geocoder"
 gem 'capistrano', '~> 2.15.5'
 
+#tree model support
+gem 'ancestry', '~> 2.1.0'
+
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -40,6 +44,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem "less-rails"
   gem 'rails-assets-bootstrap'
+  #gem 'rails-assets-angular'
+  #gem 'rails-assets-angular-route'
+  #gem 'rails-assets-angular-resource'
 end
 
 group :development, :test do
